@@ -19,10 +19,13 @@
 \usepackage{url}
 %\usepackage{marvosym} % For cool symbols.
 \usepackage{hyperref}
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+\fancyhead{}
 \fancyfoot{}
+%\fancyhf{} % clear all header and footer fields
+\cfoot{\footnotesize{Hitesh Sajnani -- }\thepage{}~\footnotesize{of}~\pageref{LastPage} -- \scriptsize{Curriculum Vitae}}
+\pagestyle{fancy}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
@@ -32,7 +35,6 @@
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
-
 \urlstyle{same}
 
 \raggedbottom
@@ -52,12 +54,13 @@
   }
 }
 
-\newcommand{\resumeSubheading}[4]{
+\newcommand{\resumeSubheading}[5]{
   \vspace{-3pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabular*}\vspace{-7pt}
+      \textit{\small#5}  
+    \end{tabular*}\vspace{-12pt}
 }
 
 \newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
@@ -86,8 +89,8 @@
 
 %----------HEADING-----------------
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-  \textbf{\href{http://ics.uci.edu/~hsajnani}{\Large Hitesh Sajnani}} & Email : \href{mailto:hitsaj@microsoft.com}{hitsaj@microsoft.com}\\
-  \url{https://www.ics.uci.edu/~hsajnani/} & Mobile : +1-832-278-7005 \\
+  \textbf{\href{http://ics.uci.edu/~hsajnani}{\huge Hitesh Sajnani}} & Email : \href{mailto:hitsaj@microsoft.com}{hsajnani@uci.edu}\\
+  \url{https://www.ics.uci.edu/~hsajnani/} & Mobile : +1-832-278-7005 \\  \\ \\ 
 \end{tabular*}
 
 %-----------RESEARCH INTEREST-----------------
@@ -108,129 +111,198 @@ Empirical Software Engineering, Large Scale Code Clone Detection and Management,
   \resumeSubHeadingListStart
     \resumeSubheading
       {Ph.D., Information and Computer Science, University of California, Irvine}{2010 -- 2016}
-      {Thesis topic: Large Scale Code Clone Detection; Advisor: Prof. Cristina V. Lopes }  {} % {   2010 -- 2016}
+      {Thesis topic: Large Scale Code Clone Detection} {}
+      {Advisor: Prof. Cristina V. Lopes } % {   2010 -- 2016}
     \resumeSubheading
       {M.S., Information and Computer Science, University of California, Irvine}{2010 -- 2012}
       {Thesis topic: Enhancing Component Identification Using Machine Learning}{}
+        {Advisor: Prof. Cristina V. Lopes }
     \resumeSubheading
       {B.Tech, Computer Engineering, Dharmsinh Desai University, India}{2003 -- 2007}
       {GPA: 4.00/4.00; Gold Medalist}{}
+      {}
   \resumeSubHeadingListEnd
 
 %-----------AWARDS-----------------
 
-\section{Awards and Honors}
+\section{Honors and Awards}
   \resumeSubHeadingListStart
-  \resumeSubheading
-  {Patent Award}{}
-  {Source Code File Recommendation Notification, 2018} {}
+
  \resumeSubheading
   {Distinguished Artifact Award}{}
-  {Object-Oriented Programming, Systems, Languages \& Applications (OOPSLA), 2017} {}
+  {Object-Oriented Programming, Systems, Languages \& Applications (OOPSLA), 2017.} {}
+  {}
+  \resumeSubheading
+  {Nomination for ACM SIGSOFT Outstanding Doctoral Dissertation Award}{}
+  {Nominated by Department of Informatics, UC Irvine, 2017} {}
+   {}
   \resumeSubheading
   {Distinguished Paper Award}{}
-  {International Conference on Software Maintenance and Evolution (ICSME), 2016} {}
+  {International Conference on Software Maintenance and Evolution (ICSME), 2016.} {}
+  {}
   \resumeSubheading
   {ACM Student Scholar Award}{}
-  {ACM Turing Centenary Celebration, San Francisco, 2013} {}
+  {ACM Turing Centenary Celebration, San Francisco, 2013.} {}
+  {}
   \resumeSubheading
   {Best Industrial Paper Award}{}
-  {Working Conference on Reverse Engineering (WCRE), 2011} {}
+  {Working Conference on Reverse Engineering (WCRE), 2011.} {}
+{}
   \resumeSubheading
   {Outstanding Paper Award}{}
-  {Corporate Technology Board Conference, Tata Consultancy Service, 2011} {}
+  {Corporate Technology Board Conference, Tata Consultancy Service, 2011.} {}
+  {}
   \resumeSubheading
   {Eklavya Award (equivalent to \emph{summa cum laude)} }{}
-  {Awarded for securing the highest cumulative GPA among all engineering students across all disciplines, India, 2007 } {}
+  {Awarded for securing the highest cumulative GPA among all engineering students across all disciplines, India, 2007. } {}
+  {}
    \resumeSubHeadingListEnd
 
+\section{Patents}
 
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Source Code File Recommendation Notification}{}
+      {Patent\# 404762-US-NP}{Aug. 2018}
+      {} {\small{Automatic recommendation of files during pull a request creation to complete a change based on historical mining and modeling of pull requests' metadata.}}
+
+\newpage
+
+   \resumeSubHeadingListEnd
 %-----------EXPERIENCE-----------------
 \section{Research \& Work Experience}
+  \vspace{5pt}
   \resumeSubHeadingListStart
 
     \resumeSubheading
       {Microsoft, Tools for Software Engineers (TSE) group}{Redmond, WA}
-      {Engineer}{Mar 2016 - Present}
+      {Research Engineer}{Mar 2016 - Present}
+      {}
+     \vspace{-15pt}
       \resumeItemListStart
-        \resumeItem {} {Building cutting edge tools and technology to assist software engineers build better software}
-        \resumeItem {} {Building cutting edge tools and technology to assist software engineers build better software}
+          \resumeItem {} {Analyzing factors influencing developer satisfaction and productivity.}
+          \resumeItem {} {Building cutting edge tools and technology to assist software engineers build better software.}
       \resumeItemListEnd
 
-    \resumeSubheading
+
+
+     \resumeSubheading
       {University of California, Irvine}{Irvine, CA}
       {Graduate Student Researcher}{2010 -- 2016}
+     {}
+     \vspace{-15pt}
       \resumeItemListStart
         \resumeItem{}
-          {Advanced research in tools and techniques for scalable code clone detection (Ph.D. thesis topic)}
+          {Advanced research in tools and techniques for scalable code clone detection. (Ph.D. thesis topic)}
         \resumeItem{}
-          {Developed machine learning based approaches to software architecture recovery (Master’s thesis topic)}
+          {Developed machine learning based approaches to software architecture recovery. (Master’s thesis topic)}
         \resumeItem{}
-          {Mined and analyzed data from software repositories to gain insights about software evolution}
-        \resumeItem{}
-          {Dataduct an open source workflow framework to create and manage data pipelines leveraging reusables patterns to expedite developer productivity.}
-      \resumeItemListEnd
+          {Mined and analyzed data from software repositories to gain insights about software evolution.}
+       \resumeItemListEnd
 
+\vspace{5pt}
     \resumeSubheading
       {Microsoft Research, Mentor: Dr. Rob DeLine \& Dr. Wolfram Schulte}{Redmond, WA}
       {Research Intern}{Summer 2013}
+     {}
+     \vspace{-15pt}
       \resumeItemListStart
         \resumeItem {} {Analyzed software change data of products like Office, Bing, and Windows to understand and
-improve their development practices at Microsoft}
-        \resumeItem {} {Helped design and evaluate \emph{Tempe}, a research prototype for interactive and collaborative webservice for data analysis}
+improve their development practices at Microsoft.}
+        \resumeItem {} {Helped design and evaluate \emph{Tempe}, a research prototype for interactive and collaborative webservice for data analysis.}
       \resumeItemListEnd
 
-  \newpage
+\vspace{5pt}
     \resumeSubheading
       {Microsoft Research, Mentor: Dr. Owen Lyold}{Mountain View, CA}
       {Research Intern}{Summer 2012}
+     {}
+     \vspace{-15pt}
       \resumeItemListStart
-        \resumeItem {} {Designed and developed a machine learning based entity resolution algorithm and tool for detecting similar records}
+        \resumeItem {} {Designed and developed a machine learning based entity resolution algorithm and tool for detecting similar short text records.}
 \resumeItemListEnd
  
+\vspace{5pt}
   \resumeSubheading
       {SRCH2, Mentor: Dr. Chen Li}{Irvine, CA}
       {Research Intern}{Summer 2011}
+     {}
+     \vspace{-15pt}
       \resumeItemListStart
-        \resumeItem {} {SRCH2 is a research group at UC Irvine specializing in powerful search technology. I worked on developing state-of-the-art algorithms for location based search engine that included features like instant and fuzzy search}
+        \resumeItem {} {SRCH2 is a research group at UC Irvine specializing in powerful search technology. I worked on developing state-of-the-art algorithms for location based search engine that included features like instant and fuzzy search.}
 \resumeItemListEnd
 
+\vspace{5pt}
   \resumeSubheading
       {Tata Research Development and Design Center}{Pune, India}
       {Researcher}{2007 -- 2010}
+      {}
+     \vspace{-15pt}
       \resumeItemListStart
-        \resumeItem {} {Facilitated software evolution of business systems by improving their architecture through re-factoring, code partitioning, layering, and pattern enforcement}
+        \resumeItem {} {Facilitated software evolution of business systems by improving their architecture through re-factoring, code partitioning, layering, and pattern enforcement.}
       \resumeItemListEnd
 
+\vspace{5pt}
   \resumeSubheading
       {Tata Research Development and Design Center, Mentors: Ravindra Naik}{Pune, India}
       {Research Intern}{Winter 2007}
+       {}
+     \vspace{-15pt}
       \resumeItemListStart
-        \resumeItem {} {Developed Software Healthmeter, a metrics (structural and behavioral) based research prototype to determine software maintainability}
+        \resumeItem {} {Developed Software Healthmeter, a metrics (structural and behavioral) based research prototype to determine software maintainability.}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
 
+
+\section{Teaching Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\small{Informatics 191 A: Senior Design Project:  Usability Engineering \& Software Development }}{\small{UC Irvine}}
+      {Teaching Assistant;  Level: Undergrad; Class Size: 80 students}{Spring 2011}
+      {} {Group supervised project in which students analyze, specify, design, construct, evaluate and adapt a significant information processing system.}
+
+    \resumeSubheading
+      {\small{Informatics 43: Introduction to Software Engineering }}{\small{UC Irvine}}
+      {Teaching Assistant; Level: Grad; Class Size: 40 students}{Winter 2011}
+      {} {Concepts, methods, and current practice of software engineering. Large-scale software production, software life cycle models, principles and techniques for each stage of development.}
+
+    \resumeSubheading
+      {\small{Informatics 133: User Interaction Software}}{\small{UC Irvine}}
+      {Teaching Assistant;  Level: Undergrad; Class Size: 50 students}{Fall 2010}
+      {} {Introduction to human-computer interaction programming. Emphasis on current tools, standards, methodologies for implementing effective interaction designs. Strategies for evaluation of user interfaces}
+
+%\resumeSubHeadingListStart
+  \resumeSubHeadingListEnd
+
+\newpage
+
 %-----------JOURNAL PUBLICATIONS-----------------
 
-\section{Publications}
-\textbf{Journal and Full Conference Papers}
+\section{Refereed Publications}
+\vspace{5pt}
+\textbf{Journal papers}
 
 \begin{enumerate}
 
- \vspace{-1pt}\item\small{Pavneet Kochhar, Stanislaw Swierc, Trevor Carnahan, \textbf{Hitesh Sajnani}, Meiyappan Nagappan. “Understanding the role of reporting in work item tracking systems for software development: an industrial case study,” in Proceedings of International Conference on Software Maintenance and Evolution, Sept. 2018, Madrid, Spain, USA  }
-
- \vspace{-1pt}\item\small{Cristina V. Lopez, Petr Maj, Pedro Martins, Vaibhav Saini, Di Yang, Jakub Zitny, \textbf{Hitesh Sajnani}, and Jan Vitek. “DéjàVu: a map of code duplicates on GitHub,” in Proceedings of ACM on Programming Languages, OOPSLA, Oct. 2017, Vancouver, Canada \textbf{[Distinguished Artifact Award]}  }
-
- \vspace{-1pt}\item\small{Vaibhav Saini, \textbf{Hitesh Sajnani}, and Cristina Lopes. “An Empirical Analysis on the
-Relationship Between Software Clones and Quality Metrics,” invited paper for the
-Empirical Software Engineering Journal  }
+ \item\small{Vaibhav Saini, \textbf{Hitesh Sajnani}, and Cristina Lopes. “An Empirical Analysis on the
+Relationship Between Software Clones and Quality Metrics,” Empirical Software Engineering Journal, June 2017 \textbf{[Invited Paper]}}
 
  \vspace{-1pt}\item\small{\textbf{Hitesh Sajnani}, Vaibhav Saini, and Cristina Lopes. “A Parallel and Efficient Approach
-to Large Scale Code Clone Detection,” invited paper in Journal of Software: Evolution
-and Process, March 2015}
+to Large Scale Code Clone Detection,” Journal of Software: Evolution and Process, March 2015 \textbf{[Invited Paper]}}
 
-%\textbf{Conference}
+\end{enumerate}
+
+
+
+\textbf{ Full Conference Papers}
+
+\begin{enumerate}
+
+\item\small{Pavneet Kochhar, Stanislaw Swierc, Trevor Carnahan, \textbf{Hitesh Sajnani}, Meiyappan Nagappan. “Understanding the role of reporting in work item tracking systems for software development: an industrial case study,” in Proceedings of International Conference on Software Maintenance and Evolution, Sept. 2018, Madrid, Spain, USA  }
+
+ \vspace{-1pt}\item\small{Cristina Lopes, Petr Maj, Pedro Martins, Vaibhav Saini, Di Yang, Jakub Zitny, \textbf{Hitesh Sajnani}, and Jan Vitek. “DéjàVu: a map of code duplicates on GitHub,” in Proceedings of ACM on Programming Languages, OOPSLA, Oct. 2017, Vancouver, Canada \textbf{[Distinguished Artifact Award]}  }
 
  \vspace{-1pt}\item\small{Adriano de Paula, Eduardo Guerra, \textbf{Hitesh Sajnani}, Cristina Lopes and Otavio Lemos. “An Exploratory Study of Interface Redundancy in Code Repositories,” in Proceedings of Working Conference on Source Code Analysis and Manipulation, Oct. 2016, Raleigh, USA  }
 
@@ -275,7 +347,7 @@ Conference on Software Maintenance, Sept. 2011, Williamsburg, USA }
 
 \begin{enumerate}
 
-\vspace{-1pt}\item\small{Pavneet Kochhar, Stanislaw Swierc, Trevor Carnahan, \textbf{Hitesh Sajnani}, Meiyappan Nagappan. “Understanding the role of reporting in work item tracking systems for software development: an industrial case study,” in Proceedings of International Conference on Software Engineering, May 2018, Gothenburg, Sweden  }
+\item\small{Pavneet Kochhar, Stanislaw Swierc, Trevor Carnahan, \textbf{Hitesh Sajnani}, Meiyappan Nagappan. “Understanding the role of reporting in work item tracking systems for software development: an industrial case study,” in Proceedings of International Conference on Software Engineering, May 2018, Gothenburg, Sweden  }
 
    \vspace{-1pt}\item\small{Vaibhav Saini, \textbf{Hitesh Sajnani}, Jaewoo Kim and Cristina Lopes. “SourcererCC and
 SourcererCC-I: Tools to Detect Clones in Batch mode and During Software Development,”
@@ -316,12 +388,12 @@ MapReduce,” in Proceedings of International Conference on Program Comprehensio
 Software Evolvability,” in Proceedings of India Software Engineering Conference, Feb 2010, Mysore, India}
 
 \end{enumerate}
-\newpage
+
 
 \textbf{Papers under Review}
 
 \begin{enumerate}
-  \vspace{-1pt}\item\small{Michele Tufano, \textbf{Hitesh Sajnani}, Kim Herzig. “Towards Predicting the Impact of Software Changes on Building Activities,” in International Conference on Software Engineering, May 2019, Montreal, Canada}
+ \item\small{Michele Tufano, \textbf{Hitesh Sajnani}, Kim Herzig. “Towards Predicting the Impact of Software Changes on Building Activities,” in International Conference on Software Engineering, May 2019, Montreal, Canada}
 
    \vspace{-1pt}\item\small{Vaibhav Saini, Farima Farmahinifarahani, Yadong Lu, Di Yang, Pedro Martins, \textbf{Hitesh Sajnani}, Pierre Baldi, and Cristina Lopes. “Towards Automating Precision Studies of Clone Detectors,” in International Conference on Software Engineering, May 2019, Montreal, Canada}
 
@@ -329,6 +401,7 @@ Software Evolvability,” in Proceedings of India Software Engineering Conferenc
 
 \end{enumerate}
 
+\newpage
 
 \section{Professional Services}
 
@@ -336,7 +409,7 @@ Software Evolvability,” in Proceedings of India Software Engineering Conferenc
 
 \begin{itemize}
 
-   \vspace{-5pt}\item\small{Co-Chair, Program, International Working Conference on Source Code Analysis and Manipulation, Engineering Track, SCAM’19, Cleveland, USA }
+  \item\small{Co-Chair, Program, International Working Conference on Source Code Analysis and Manipulation, Engineering Track, SCAM’19, Cleveland, USA }
   \vspace{-5pt}\item\small{Co-Chair, Program, International Conference on Program Comprehension, Industry Track, ICPC’18, Gothenburg, Sweden }
    \vspace{-5pt}\item\small{Co-Chair, Program, International Workshop on Software Clones, IWSC’17, Klagenfurt, Austria }
    \vspace{-5pt}\item\small{Chair, Social Media, International Conference on Software Maintenance and Evolution, ICSME’15, Bremen, Germany }
@@ -348,7 +421,7 @@ Software Evolvability,” in Proceedings of India Software Engineering Conferenc
 
 \begin{itemize}
 
-  \vspace{-5pt}\item\small{International Conference on Software Maintenance 2016, 2017, 2018}
+  \item\small{International Conference on Software Maintenance 2016, 2017, 2018}
   \vspace{-5pt}\item\small{International Workshop on Software Clones 2015, 2016, 2018, 2019}
   \vspace{-5pt}\item\small{International Conference on Program Comprehension 2017, 2018}
   \vspace{-5pt}\item\small{ International Working Conference on Source Code Analysis and Manipulation 2017, 2018}
@@ -357,11 +430,21 @@ Software Evolvability,” in Proceedings of India Software Engineering Conferenc
 
 \end{itemize}
 
+\textbf{Artifact Evaluation Committee Member}
+
+\begin{itemize}
+\item\small{SIGPLAN conference on Systems, Programming, Languages and Applications, SPLASH 2013,
+Indianapolis, USA}
+  \vspace{-5pt}\item\small{International Conference on Software Engineering, ICSE 2019,
+Montreal, Canada}
+
+\end{itemize}
+
 \textbf{Journal Reviewer}
 
 \begin{itemize}
 
-  \vspace{-5pt}\item\small{IEEE Transactions on Software Engineering 2016, 2017, 2018}
+  \item\small{IEEE Transactions on Software Engineering 2016, 2017, 2018}
   \vspace{-5pt}\item\small{Empirical Software Engineering 2016, 2017, 2018}
   \vspace{-5pt}\item\small{Journal of Systems and Software 2018}
   \vspace{-5pt}\item\small{Journal on Software Quality 2014, 2015}
@@ -369,19 +452,9 @@ Software Evolvability,” in Proceedings of India Software Engineering Conferenc
 
 \end{itemize}
 
-\textbf{Artifact Evaluation Committee Member}
-
-\begin{itemize}
-  \vspace{-5pt}\item\small{SIGPLAN conference on Systems, Programming, Languages and Applications, SPLASH 2013,
-Indianapolis, USA}
-  \vspace{-5pt}\item\small{International Conference on Software Engineering, ICSE 2019,
-Montreal, Canada}
-
-\end{itemize}
-
 \textbf{Student Volunteer}
 \begin{itemize}
-  \vspace{-5pt}\item\small{International Conference on Software Engineering, ICSE 2014,
+\item\small{International Conference on Software Engineering, ICSE 2014,
 Hyderabad, India}
 
   \vspace{-5pt}\item\small{ACM Turing Award Centenary Celebration, 2012, San Francisco, USA}
@@ -390,87 +463,77 @@ Hyderabad, India}
 Portland, USA}
 \end{itemize}
 
-
+\newpage
 
 \section{Public Research Talks \& Presentations}
-
+\vspace{5pt}
 \textbf{Invited Talks}
 \begin{itemize}
 
-  \vspace{-5pt}\item\small{Large Scale Code Clone Detection at Tools for Software Engineers Group, Microsoft, 2016, Redmond, USA}
+ \item\small{Large Scale Code Clone Detection at Tools for Software Engineers Group, Microsoft, 2016, Redmond, USA}
 
-  \vspace{-5pt}\item\small{Web Search \& Indexing, invited lecture in the class of Information Retrieval at UC Irvine, 2016, Irvine, USA}
+  \vspace{0pt}\item\small{Web Search \& Indexing, invited lecture in the class of Information Retrieval at UC Irvine, 2016, Irvine, USA}
 
-  \vspace{-5pt}\item\small{Web Crawling, invited lecture in the class of Information Retrieval at UC Irvine, 2015, Irvine, USA}
+  \vspace{0pt}\item\small{Web Crawling, invited lecture in the class of Information Retrieval at UC Irvine, 2015, Irvine, USA}
 
-  \vspace{-5pt}\item\small{Using Tempe for Empirical Software Engineering Studies, Microsoft Research, 2013, Redmond, USA}
+  \vspace{0pt}\item\small{Using Tempe for Empirical Software Engineering Studies, Microsoft Research, 2013, Redmond, USA}
 
-  \vspace{-5pt}\item\small{Large Scale Code Clone Detection, Tata Research Development and Design Center, 2013, Pune, India}
+  \vspace{0pt}\item\small{Large Scale Code Clone Detection, Tata Research Development and Design Center, 2013, Pune, India}
 
-  \vspace{-5pt}\item\small{Latent Dirichlet Allocation: Uses in SE Research, Tata Research Development and Design Center, 2013,  Pune, India}
+  \vspace{0pt}\item\small{Latent Dirichlet Allocation: Uses in SE Research, Tata Research Development and Design Center, 2013,  Pune, India}
 
-  \vspace{-5pt}\item\small{Software Architecture Recovery, invited lecture in the class of Software Engineering at UC Irvine, 2011, Irvine, USA}
+  \vspace{0pt}\item\small{Software Architecture Recovery, invited lecture in the class of Software Engineering at UC Irvine, 2011, Irvine, USA}
 
 \end{itemize}
 
 \textbf{Conference Presentations}
 \begin{itemize}
 
-  \vspace{-5pt}\item\small{Understanding the role of reporting in work item tracking systems for software development: an industrial case study, in International Conference on Software Maintenance and Evolution, 2018, Madrid, Spain}
+  \item\small{Understanding the role of reporting in work item tracking systems for software development: an industrial case study, in International Conference on Software Maintenance and Evolution, 2018, Madrid, Spain}
 
-  \vspace{-5pt}\item\small{Comparing Quality Metrics for Cloned and Non-Cloned Java Methods: A Large Scale Empirical Study, in International Conference on Software Maintenance and Evolution, 2016, North Carolina, USA}
+  \vspace{0pt}\item\small{Comparing Quality Metrics for Cloned and Non-Cloned Java Methods: A Large Scale Empirical Study, in International Conference on Software Maintenance and Evolution, 2016, North Carolina, USA}
 
-  \vspace{-5pt}\item\small{SoucererCC: Scaling Token-Based Code Clone Detection to Big-Code, in International Conference on Software Engineering, 2016, Texas, USA}
+  \vspace{0pt}\item\small{SoucererCC: Scaling Token-Based Code Clone Detection to Big-Code, in International Conference on Software Engineering, 2016, Texas, USA}
 
-  \vspace{-5pt}\item\small{Is Popularity a Measure of Quality? An Analysis of Maven Components, in International Conference on Software Maintenance and Evolution, 2014, Victoria, Canada}
+  \vspace{0pt}\item\small{Is Popularity a Measure of Quality? An Analysis of Maven Components, in International Conference on Software Maintenance and Evolution, 2014, Victoria, Canada}
 
-  \vspace{-5pt}\item\small{A Dataset for Maven Artifacts and Bug Patterns Found in Them, in Working Conference on Mining Software Repositories, 2014, Hyderabad, India}
+  \vspace{0pt}\item\small{A Dataset for Maven Artifacts and Bug Patterns Found in Them, in Working Conference on Mining Software Repositories, 2014, Hyderabad, India}
 
-  \vspace{-5pt}\item\small{Active Files as a Measure of Software Maintainability, in International Conference on Software Engineering, 2014, Hyderabad, India}
+  \vspace{0pt}\item\small{Active Files as a Measure of Software Maintainability, in International Conference on Software Engineering, 2014, Hyderabad, India}
 
-  \vspace{-5pt}\item\small{Probabilistic Component Identification, in India Software Engineering Conference, 2014, Chennai, India}
+  \vspace{0pt}\item\small{Probabilistic Component Identification, in India Software Engineering Conference, 2014, Chennai, India}
 
-  \vspace{-5pt}\item\small{A Parallel and Efficient Approach to Large Scale Code Clone Detection, in International Workshop on Software Clones, 2013, San Francisco, USA}
+  \vspace{0pt}\item\small{A Parallel and Efficient Approach to Large Scale Code Clone Detection, in International Workshop on Software Clones, 2013, San Francisco, USA}
 
-  \vspace{-5pt}\item\small{Automatic Software Architecture Recovery: A Machine Learning Approach, in International Conference on Program Comprehension, 2012, Passau, Germany}
+  \vspace{0pt}\item\small{Automatic Software Architecture Recovery: A Machine Learning Approach, in International Conference on Program Comprehension, 2012, Passau, Germany}
 
-  \vspace{-5pt}\item\small{Easing Software Evolution: A Change-data and Domain-driven Approach, in India Software Engineering Conference, 2012, Kanpur, India}
+  \vspace{0pt}\item\small{Easing Software Evolution: A Change-data and Domain-driven Approach, in India Software Engineering Conference, 2012, Kanpur, India}
 
-  \vspace{-5pt}\item\small{Multi-Label Classification of Short Text: A Casestudy on Wikipedia Barnstars, in Workshop on Analyzing Microtext, AAAI, 2011, San Francisco, USA}
+  \vspace{0pt}\item\small{Multi-Label Classification of Short Text: A Casestudy on Wikipedia Barnstars, in Workshop on Analyzing Microtext, AAAI, 2011, San Francisco, USA}
 
-  \vspace{-5pt}\item\small{Application Architecture Discovery: Towards Domain-driven, Easily Extensible Code Structure, in Working Conference on Reverse Engineering, 2011, Limerick, Ireland}
+  \vspace{0pt}\item\small{Application Architecture Discovery: Towards Domain-driven, Easily Extensible Code Structure, in Working Conference on Reverse Engineering, 2011, Limerick, Ireland}
 
-  \vspace{-5pt}\item\small{Using Change History of Software To Improve Software Evolvability, in India Software Engineering Conference, 2010, Mysore, India}
-
-\end{itemize}
-
-
-\section{Mentoring \& Teaching}
-
-\textbf{Mentoring: Internships \& Individual Study} 
-
-\begin{itemize}
-\vspace{-5pt}\item\small{Michele Tufano, Ph.D. Student, College of Williams and Mary, Williamsburg, Virginia; Research Intern at Tools for Software Engineers group, Microsoft, Summer 2018.} \\
-\vspace{-5pt}\item\small{Pavneet Kochhar, Ph.D. Student Singapore Management University, Singapore; Research Intern, Tools for Software Engineers group, Microsoft, Summer 2017. (Pavneet is now a software engineer at Microsoft Azure.)} \\
-\vspace{-5pt}\item\small{Vaibhav Saini, Ph.D. Student  University of California, Irvine; Research Intern, Tools for Software Engineers group, Microsoft, Summer 2016.} \\
-\vspace{-5pt}\item\small{Caio Lopes, Bachelor Engineering,  University de Sao Paulo, Brazil; Research Intern, University of California, Irvine, Summer 2015 (co-mentored w/ Prof. Lopes. Caio is now a data scientist at Itau Unibanco)}  \\
-\vspace{-5pt}\item\small{Jaewoo Kim, M.S. Student, University of California, Irvine; Individual Study (co-mentored w/ Prof. Lopes. Jaewoo is now a software engineer at 9M Interactive)} \\ 
-\vspace{-5pt}\item\small{Lukas Schulte, B.S. Boston University, Research Intern, Tools for Software Engineers group, Microsoft, Summer 2013  (Lukas is now a director of engineering at OCTI, INC)}\\
-\vspace{-5pt}\item\small{Pramit Chaudhary, M.S. Student, University of California, Irvine, Individual Study (co-mentored w/ Prof. Lopes. Pramit is now a data scientist at e-Harmony)} \\
-\vspace{-5pt}\item\small{Praneet Mhatre, M.S. Student, University of California, Irvine, Individual Study  (co-mentored w/ Prof. Lopes. Praneet is now a data scientist at Zillow)} \\
-\vspace{-5pt}\item\small{Prashil Gupta, B.S. Student, Dharmsinh Desai Univesity, India;  Research Intern, Tata Research Development and Design Center, Pune, India, Summer 2009. ( Prashil is now a software engineer at Cisco )} \\
-\vspace{-5pt}\item\small{Dharam Thacker, B.S. Student, Dharmsinh Desai Univesity, India;  Research Intern, Tata Research Development and Design Center, Pune, India, Summer 2009. ( Dharam is now an architect at JP Morgan ) }\\
-\vspace{-5pt}\item\small{Manish Agarwal, B.S. Student, NIT Warangal, India, Research Intern, Tata Research Development and Design Center, Pune, India, Summer 2009. ( Manish is now a software engineer at Intel )} \\
+  \vspace{0pt}\item\small{Using Change History of Software To Improve Software Evolvability, in India Software Engineering Conference, 2010, Mysore, India}
 
 \end{itemize}
+\newpage
 
-\textbf{Teaching}
+\section{Research Students Supervised}
+
 
 \begin{itemize}
 
-\vspace{-5pt}\item\small{Teaching Assistant, Informatics 191 A: Senior Design Project, UC Irvine, Spring 2011} \\
-\vspace{-5pt}\item\small{Teaching Assistant, Informatics 43: Introduction to Software Engineering, UC Irvine, Winter 2011} \\
-\vspace{-5pt}\item\small{Teaching Assistant, Informatics 133: User Interaction Software, UC Irvine, Fall 2010} 
+\vspace{5pt}\item\small{Michele Tufano, Ph.D. Student, College of Williams and Mary, Williamsburg, Virginia; Research Intern at Tools for Software Engineers group, Microsoft, Summer 2018.} \\
+\vspace{0pt}\item\small{Pavneet Kochhar, Ph.D. Student Singapore Management University, Singapore; Research Intern, Tools for Software Engineers group, Microsoft, Summer 2017. (Pavneet is now a software engineer at Microsoft Azure.)} \\
+\vspace{0pt}\item\small{Vaibhav Saini, Ph.D. Student  University of California, Irvine; Research Intern, Tools for Software Engineers group, Microsoft, Summer 2016.} \\
+\vspace{0pt}\item\small{Caio Lopes, Bachelor Engineering,  University de Sao Paulo, Brazil; Research Intern, University of California, Irvine, Summer 2015 (co-mentored w/ Prof. Lopes. Caio is now a data scientist at Itau Unibanco)}  \\
+\vspace{0pt}\item\small{Jaewoo Kim, M.S. Student, University of California, Irvine; Individual Study (co-mentored w/ Prof. Lopes. Jaewoo is now a software engineer at 9M Interactive)} \\ 
+\vspace{0pt}\item\small{Lukas Schulte, B.S. Boston University, Research Intern, Tools for Software Engineers group, Microsoft, Summer 2013  (Lukas is now a director of engineering at OCTI, INC)}\\
+\vspace{0pt}\item\small{Pramit Chaudhary, M.S. Student, University of California, Irvine, Individual Study (co-mentored w/ Prof. Lopes. Pramit is now a data scientist at e-Harmony)} \\
+\vspace{0pt}\item\small{Praneet Mhatre, M.S. Student, University of California, Irvine, Individual Study  (co-mentored w/ Prof. Lopes. Praneet is now a data scientist at Zillow)} \\
+\vspace{0pt}\item\small{Prashil Gupta, B.S. Student, Dharmsinh Desai Univesity, India;  Research Intern, Tata Research Development and Design Center, Pune, India, Summer 2009. ( Prashil is now a software engineer at Cisco )} \\
+\vspace{0pt}\item\small{Dharam Thacker, B.S. Student, Dharmsinh Desai Univesity, India;  Research Intern, Tata Research Development and Design Center, Pune, India, Summer 2009. ( Dharam is now an architect at JP Morgan ) }\\
+\vspace{0pt}\item\small{Manish Agarwal, B.S. Student, NIT Warangal, India, Research Intern, Tata Research Development and Design Center, Pune, India, Summer 2009. ( Manish is now a software engineer at Intel )} \\
 
 \end{itemize}
 
@@ -479,7 +542,7 @@ Portland, USA}
 \begin{tabular}{lr}
 \begin{minipage}[t]{3.5in}
 Dr.\ Cristina V. Lopes\\
-Department of Informatics \\
+Professor, Department of Informatics \\
 Donald Bren School of Information and \\
 Computer Sciences\\
 University of California\\
@@ -489,7 +552,7 @@ lopes@uci.edu \\
 &
 \begin{minipage}[t]{3.5in}
 Dr.\ Nachiappan Nagappan\\
-Researcher\\
+Principal Researcher\\
 Microsoft Research\\
 Empirical Software Engineering Group (ESE)\\
 Redmond, WA\\
@@ -499,7 +562,7 @@ nachin@microsoft.com\\
 \\ 
 \begin{minipage}[t]{3.5in}
 Dr.\ Thomas Zimmermann\\
-Researcher\\
+Senior Researcher\\
 Microsoft Research\\
 Empirical Software Engineering Group (ESE)\\
 Redmond, WA\\
@@ -508,7 +571,7 @@ tzimmer@microsoft.com\\
 &
 \begin{minipage}[t]{3.5in}
 Dr.\ Michael W. Godfrey \\
-David R. Cheriton School of Computer Science\\
+Professor, David R. Cheriton School of Computer Science\\
 University of Waterloo\\
 Waterloo, Ontario, N2L 3G1, Canada \\
 migod@uwaterloo.ca \\
