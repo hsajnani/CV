@@ -1,0 +1,375 @@
+
+%\documentstyle[12pt]{article}
+%\pdfminorversion=4
+\documentclass[a4paper]{article}
+
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\topmargin}{-.3in}
+\setlength{\textheight}{9in}
+
+\usepackage{hyperref}
+\usepackage{lastpage}
+%\pagestyle{empty}
+\usepackage{fancyhdr}
+\usepackage{pagecounting}
+\usepackage[dvips]{color}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\thispagestyle{fancy}
+\fancyfoot[C]{\small \textcolor{black}{Hitesh Sajnani -- }\thepage{}~\small{of}~\pageref{LastPage} -- \small{Research Statement}} 
+\usepackage{graphicx}
+\usepackage{svg}
+\usepackage{csquotes}
+%\graphicspath{ {./images/} }
+\begin{document}
+%\usepackage{svg}
+
+\begin{center}
+{\LARGE \textbf{Research Statement}} \\[.3in]
+{\large  \textbf{Hitesh Sajnani}} \\
+{\small hsajnani@uci.edu}
+\end{center}
+\pagestyle{fancy}
+\lhead{\textcolor{black}{\it Hitesh Sajnani}}
+\rhead{\textcolor{black}{\thepage/\pageref{LastPage}}}
+
+\vspace*{.5in}
+
+My primary research interest has been in the area of Software Engineering. More specifically, I am interested in developing theoretical and practical techniques and tools for helping people to understand, modify, and build software systems. My research activities to achieve this goal so far span the spectrum from empirical studies of software properties and changes, to code modularization, to architecture recovery to code clone detection and management. 
+I believe that  to ultimately overcome the essential difficulties, both the processes and development of software should be data-driven, formalized and largely automated. Artificial Intelligence (AI) and Machine Learning (ML) techniques can play an important role in this effort since the field of software engineering turns out to be one such fertile domain where many software development and maintenance tasks could be formulated as learning problems and ML techniques could be used to obtain solutions.
+
+The techniques and methods I develop and use are at the intersection of software engineering, information retrieval, machine learning, and social science.
+Most of my work has greatly benefited from interaction with a number of colleagues and specifically my advisor, Prof. Cristina V. Lopes. I describe my work below.
+
+
+%My research interests span the areas of network algorithms, system
+%architecture and component design. A common thread in my research is in understanding the
+%theory and design of scalable architectures and parallel systems.
+%I have resorted to mathematical methods 
+%of proof which are borrowed from the areas of Algorithms, 
+%Architecture, Combinatorics, Probability, {\it \&} Queueing Theory.
+%Broadly speaking, my research belongs to
+%the area of {\it Network Architecture} (which deals with the fundamental 
+%principles of network design), 
+%an upcoming field which is still in its infancy and whose theoretical foundations are just being laid.
+
+% Say that research work has been both theoritical and practical.
+
+\section*{Research Synopsis}
+
+%i.e. a way to manage and allocate tasks amongst the individual parallel components.
+
+%I've always been fascinated with the way people develop software. 
+Over the last couple of decades, software development
+practices have changed drastically. 
+%Pervasive high-speed internet, full fledged IDEs, and a whole new generation of hyper-connected young programmers weaned on the web have established new programming practices based on massive collaboration. 
+These days, it is easier than ever to find and 
+use a well-tested piece of code written by someone else that
+does exactly what we want. Reusing code
+fragments via copy-and-paste, with or without modifications
+or adaptations, also known as code cloning, has become a common behavior of software engineers. This phenomenon has inspired a large part of my research in identifying, understanding and analyzing software clones. 
+
+% This phenomenon has inspired my research in identifying, understanding and analyzing software clones. 
+
+When I joined UC Irvine in 2010, along with my colleagues, we conducted  one of the largest empirical study
+on more than 13,000 Java projects to understand the prevalance of code cloning/reuse~\cite{filecloning} in open source Java eco-system.
+The study revealed insights about the circumstances under which files were copied/reused entirely into applications with little or no modification -- not all of which were bad. 
+More importantly, during the course of this study, I realized that there is a marked lack of accurate and scalable clone detectors that impedes code clone research research on large software repositories. 
+This motivated my work later in this field to develop scalable and accurate code clone detection tools and techniques that further enabled large scale empirical studies by to understand the phenomenon of code cloning in open source eco-systems.
+
+%More specifically, I have made contributions in the software cloning field three major aspects: (i) SourcererCC, a novel tool to efficiently
+%detect clones in ultra-large code bases and software repositories (ICSE 2016); (ii) A map-reduce based parallel and distributed algorithm to detect clones using a cluster of machines (IWSC 2013; JSEP 2014); and (iii) Several large-scale empirical studies to understand the phenomenon of code cloning or copy-pasting and its effect on software systems (ICSME 2011; ICSME 2014; SCAM 2014; ICSME 2016; OOPSLA 2017).
+
+%(i) Large code bases and repositories of projects make clone detection extremely important for detection of license violations, mining library candidates, detecting similar mobile applications, reverse engineering product lines, finding the provenance of a component, and code search. 
+%(ii) The evidence that cloning is not always bad; and 
+%(iii) There is a marked lack of clone detectors that are accurate and scablale to large code repositories. 
+
+%Over the period of past few years, I have developed novel tools and techniques to address these important issues. 
+%I developed a distributed and parallel solution to detect clones on large code bases using the popular MapReduce programming paradigm to scale horizontally on a cluster of commodity machines.
+%This enabled clone detection tools to detect clones on hundreds of thousands of software projects very quickly using several machines. 
+
+%He presented this work titled “A paralleland efficient approach to large scale clone detection”, in the International Workshop in Software Clones in 2013. The paper received great appreciation during the workshop and thus was invited for an extended submission to the special edition of Journal of Software: Evolution and Process by the organizers. Not only did Dr. Sajnani’s paper made significant new contributions in evaluation and describing the impact of various parameters on the
+%output of the technique, it also effectively demonstrated how the presented filtering technique can improve the
+%existing index-based clone detection techniques to achieve better performance. It was reviewed, accepted and
+%published in the Volume 27, Issue 6, in 2014. Being a leading expert in code cloning, I can strongly assert that Dr.
+%Sajnani addressed some extremely challenging problems in this area.
+
+During the course of my Ph.D., I developed several approaches to large scale code clone detection~\cite{parallellCCW, parallellCCJ, parallellCCC}, but the most central work to my dissertation is SoucererCC  -  a tool for source code clone detection designed to detect up to Type 3 (near-miss) clones over very large code bases on a standard workstation in a reasonable amount of time and with precision and recall comparable to state-of-the-art~\cite{sourcererCC}. SourcererCC is purely token based, and ignores information coming from syntax trees or dependence graphs – that is what allows it to be potentially fast, compared to more sophisticated code clone detection approaches. %But clone detection is, at its core, an $O(N^2)$ problem, a property that always presents a serious obstacle to scalability. In order to tackle the scalability problem, SourcererCC builds on techniques that come from work in large databases and search engines, specifically SSJoin, and prefix and positional filtering.
+The core insight of SourcererCC was that the simple bag-of-words model that works so well – and so fast – for text documents could also be effective and efficient for detecting code clones. This is counter-intuitive, as a significant portion of the semantics of programs comes from their syntactic structures. The underlying intuition was that identifiers also reflect the semantics, as well as the role of the entities they label. Therefore, code fragments having similar semantics are likely to have similarity in their identifiers. Based on this intuition, as well as some preliminary evidence, SourcererCC was developed in order to test this hypothesis at scale. An extensive comparative evaluation of SourcererCC shows that it is the most scalable clone detection tool, and that its precision/recall performance is comparable to the most sophisticated code clone detectors publicly available.
+
+This is the first time the issue of scalability of these tools had been explicitly addressed, and yielded a practical solution. Scalability has become critical for research tools, as more and more software-related data is available. Whereas a few years ago a good software engineering research evaluation would target a dozen artifacts, research studies are now expected to target hundreds of thousands of them (e.g. entire language ecosystems). As such, because it can handle very large code bases, SourcererCC is enabling new research that couldn’t be done before. SourcererCC is publicly available at \url{https://github.com/Mondego/SourcererCC} on GitHub and since it's development, several other researchers have used, extended and included  SourcererCC in the courses to advance research in clone detection and even other related research areas. Published less than two years ago, the ICSE 2016 paper has already 85 citations (up to today).
+The impact of SourcererCC goes beyond creating new cutting-edge clone detection tools, further enable large-scale empirical research in code cloning. 
+
+My research in mining software repositories targets studying various
+software engineering myths and in separating myths from facts. 
+Traditionally, code cloning has been presented as a design error, or more broadly as a code-smell. It has been argued that
+code cloning adversely impacts software by forcing the tracking of all pieces of code when a
+certain fault is known to exist, or a new behavior is required, a task that can easily be error
+prone. Despite the disadvantages of code cloning, they also leverage the difficulty that software
+development typically implies. They speed-up development and improve developer productivity,
+which allows the reuse of tested code, or better separation of concerns. These two different but
+defensible opinions raise the question of whether code cloning should be avoided, eliminated,
+tolerated or even recommended, and under what situations. The interest and the lack of
+knowledge on the topic led to a call to conduct more empirical studies on the relation of clones
+to quality attributes. Motivated by these important issues, my colleagues and I conducted two statistical
+studies to understand (a) the relationship between code clones and 27 software quality metrics
+(ICSME 2016 ACM Best Paper Award)~\cite{quality-clones}; and (b) the relationship between code clones and 50 bug
+patterns~\cite{bugpatterns}. These studies were conducted on 4,421 Java projects, totaling
+1,486,882 methods. They are the largest studies to explore the
+relationship between code cloning and various quality attributes so far. 
+%The above studies are extremely important because like all complex problems, the issue of code cloning is that it may be a harmful programming practice (i.e. degrading the quality of the software).
+These findings provide a statistically significant piece of evidence that code cloning is not as
+harmful as it is perceived to be by the software engineering community. This result leads to
+interesting new avenues of exploration for software tools that help manage clones rather than
+eliminating them. Such tools and techniques can help developers take advantage of rapid
+development using cloning and manage clones automatically to avoid degrading the quality of
+cloned code. In another work, in collobaration with Prof. Lopes, Prof. Jan Vitek and their students 
+to study the extent of code duplication on GitHub, SourcererCC was used to 
+analyze a corpus of 4.5 million non-fork projects hosted on GitHub representing over 428 million files written
+in Java, C++, Python, and JavaScript~\cite{dejavu}. We found that this corpus has a mere 85 million unique files. In other
+words, 70\% of the code on GitHub consists of clones of previously created files that can be found elsewhere. These rates
+of duplication have implications for systems built on open source software as well as for researchers interested
+in analyzing large code bases. This work was also covered by media including SlashDot, The Register, Reddit, InfoWorld,
+and Hacker News.
+%SourcererCC is also the foundation of SourcererCC-D and SourcererCC-I~\cite{sourcererCC-1}:
+%(i) SourcererCC-D: a distributed version of SourcererCC that exploits the inherent parallelism present in SourcererCC's approach to scale horizontally on a cluster of
+%commodity machines for large scale code clone detection. The experiments presented in my dissertation demonstrate SourcererCC-D's ability to achieve ideal speed-up and near linear scale-up on large datasets; and
+%ii) SourcererCC-I: an interactive and real-time version of SourcererCC that is integrated with the Eclipse development environment. SourcererCC-I is built to support developers in clone-aware development and maintenance activities.
+
+%While working on development of these tools, I realized while there have been many tools proposed, evaluating their performance is still challenging. There is a distinct lack of bencmarks to evaluate the tools and techniques proposed. As a result, more recently, I worked on automating the evaluation of these tools and techniques. 
+%Dr. Lopes, I, and some collaborators have used SourcererCC to find clones in hundreds of thousands of projects in GitHub, in a DARPA-funded project. The tool works remarkably well. Since then, 
+Similar to the \enquote{clones are evil} paradigm, one of the perceived values of open source software is the idea that \enquote{many eyes} can increase code quality and reduce the number
+of bugs. That is, if a project is used by many users, it will have fewer bugs. We
+questioned this perception due the lack of supporting evidence and conducted an
+empirical analysis focusing on the relationship between the usage of open source
+components and their engineering quality. We analyzed the usage of more than 4,000 maven components discovered that
+in most of the cases, there are no correlation between how widely the project was used
+and how many bugs it had --- breaking an existing prevalent belief~\cite{quality-popularity}. Statistically speaking,
+the usage of open source components is driven by factors other than their engineering
+quality, a result with great implications for software engineering research. 
+Some of the my other empirical studies have informed design of the tools and techniques related to code search ~\cite{codesearch, interfaceredundancy} and component identification~\cite{astra}. 
+A common thread in my empirical research is to evaluate design ideas, validate existing beliefs and extract knowledge out of very large datasets.
+
+%Dr. Sajnani has made several more research contibutions in the field of software engineering. For example, in series of papers that Dr. Sajnani published in WCRE 2011, ICPC 2012, ISEC 2014, he was the first one to
+
+%Apart from code cloning and mining software repositories, 
+
+I have demonstrated how advanced machine learning (ML) techniques can be tailored for complex software engineering tasks, including architecture recovery~\cite{archrecoveryicpc, archrecoveryisec} and identifying discussion topics from bug reports~\cite{topicmodelling}. 
+Automatic architecture recovery is the process of recovering architecture of complex software systems with minimal human intervention which in turn can
+improve developers’ understanding of the code bases. My approach extracts structural, runtime behavioral, domain, textual and contextual (e.g. code
+authorship, line co-change) information from the software and uses advanced custom ML techniques to build model which produces schematics that reasonably represent the
+project’s main components and the relations among them. 
+%First, given any software system, the approach extracts structural, runtime behavioral, domain, textual and contextual (e.g. code
+%authorship, line co-change) information from the software that will be used by ML techniques to build a model. Since advanced ML techniques are highly scalable, this approach allows one to
+%experiment with a large number of features of the software artifacts without having to establish a priori one’s own insights about what is important and what is not important. This is an
+%extremely important and challenging problem as in most of the legacy systems, original source code is often the only available source of information about the system and it is very
+%time consuming to understand source code. Current architecture recovery techniques either require heavy human intervention or fail to recover quality components. 
+The experiments show ML as an effective technique to overcome heavy human intervention in the task of architecture recovery.  Similarly, I have demonstrated how a topic modelling technique (Latent Dirichlet Allocation) can be successfully tailored to identify the 
+trends in Android’s software development by mining Android’s bug reports. On the whole, I've found machine learning to be a very promising tool in moving away from program comprehension activities painstakingly conduced manually.
+
+\section*{Research Agenda}
+
+My research at Tools for Software Engineers (TSE) group at Microsoft focuses on
+building smarter analytics platform for software practitioners and stakeholders
+to understand and improve their software development processes. The basic philosophy
+is to transform the large amount of information generated by software engineering processes
+and tools into actionable insights that can inform better engineering practices and tools to improve programmer productivity. 
+Specifically, most of this work is focused on identifying and reducing the time spent by the developers in the \enquote{inner loop} during development for large codebases. The simplest way to define the inner loop is the iterative process that a developer performs when they write, build, test/debug, and review code. There are other things that a developer does, but this represents the basic set of steps that are performed over and over before developers share their work with their team or the rest of the world.
+The steps within the inner loop can be grouped into three broad buckets of activity - experimentation, feedback collection, and tax as shown in Figure~\ref{fig:innerloop}. 
+
+\begin{figure}[h]
+  \centering
+  \includesvg[width=100mm, height=60mm]{innerloop}
+\caption{The \enquote{Inner Loop}}
+  \label{fig:innerloop}
+\end{figure}
+
+
+Of all the steps in the inner loop, coding is the only phase that adds direct customer value. Building, testing, and reviewing code are important, but primarily they exist to provide developers with feedback about the code written to see if it meets specifications and delivers expected value.
+The purpose of the tax bucket is to call out those activities that neither add value, or provide feedback but are often the by products of necessary engineering processes. %Tax is necessary work, if its unnecessary work then it is waste and should be eliminated.
+Given this context, the overall research objective is to perform inner loop optimizations.  %overobjective of the research agenda can now be summarized as follows: 
+More specifically, there are research opportunities in how to:
+\begin{enumerate}
+\item minimize the inner loop execution time and ensure the total loop execution time to be proportional to the changes being made; 
+\vspace{-5pt}\item minimize the time feedback collection takes, but maximize the quality of the feedback developers get; 
+\vspace{-5pt}\item minimize the tax paid due to process overhead by eliminating it where it isn't necessary on any particular run through the loop (e.g., can some operations be deferred in some deployments?).
+\end{enumerate}
+
+As new code and more complexity is added to any codebase, it often leads to an increase in the time spent by the developers in their inner loop. In other words, more code means more tests which in turn means more execution time and a slow execution of the inner loop. Similarly, addtional dependencies/complexities often lead to an increase in --- build time, potentially flaky tests, and congitive overload for the developers.
+There are a number of things that can be done to optimize the inner loop for large codebases, including (i) only build and test what was changed; (ii) cache intermediate build results to speed up full builds; (iii) break up the code-base into small units and share binaries; and (iv) optimize code review process via bots for certain class of issues.
+However, there is no silver bullet solution that will ensure that the inner loop does not start slowing down. It is important to understand when it starts happening, what the cause is and work to address it. Utlimately, if ignored, a system can quickly degrade where even small changes require a disproportionate amount of time to execute the feedback collection steps of the inner loop --- and in the process, increasing developer frustation and decreasing their productivity. 
+
+Some of my ongoing research in identifying and addresssing some of the issues in optimizing developers' inner loop is as follows:  
+
+\noindent \textbf{Monitoring Technical Debt.} Increase in complexity often results in an increase in the time spent in the inner loop. Measuring and monitoring technical debt keeps a check on complexity. I use source code change history to identify and monitor technical debt of software systems during evolution~\cite{activefiles}. 
+
+\noindent \textbf{Monitoring and Reducing Build Time.} The build time is a major time sync for large codebases.  Providing proactive feedback to developers about the impact of their changes on the build time helps avoiding drastic increase in build time over time. I use build graph history and execution time to model and predict the impact of code changes on future builds~\cite{buildimpact}. 
+
+%\textbf{Incremental and Distributed Build and Test Systems:} Only build and test what was changed. Cache intermediate build results to speed up full builds.
+\noindent \textbf{Identifying Flaky Tests.}  A flaky test is a test which could fail or pass for the same configuration either due to concurrency, caching, or infrastructure, among others issues. Such behavior could be harmful to developers because test failures do not always indicate bugs in the code, and often lead to unnecessary time spent in the inner loop debugging the issue.  I use test execution patterns to identify flaky tests with high confidence.  These flaky tests are then removed from the build validation workflow to improve build reliability. 
+
+\noindent \textbf{Optimizing Code Review.}  Code reviews are expensive as they involve sign-off from multiple team members. Moreover, often there are mutliple iterations over code reviews -- each iteration demands another run through the loop i.e., make changes based on the feedback provided, followed by building and testing code. Minimizing the number of iterations by identifying and auto-fixing known feedback patterns earlier would help in reducing the inner loop time. For example, I use pull requests' metadata history to predict missing files in a new pull request to avoid iterations due to missing files~\cite{prrecommender}.  \\
+
+The above illustrations only highlight a few of many opportunities for software engineering research in this space to solve problems that are close to practice. Moving forward, I plan to continue on the path that I have been chartering at Microsoft with a focus on improving programmer productivity.
+
+%Only build and test what was changed.
+%Cache intermediate build results to speed up full builds.
+%Break up the code-base into small units and share binaries.
+
+
+%\textbf{Lead Time for Changes: } identifying process bottlenecks to improve lead time for changes~\cite{reporting}; 
+
+
+%Moving forward, I plan to continue on the path that I have been chartering at Microsoft Research. 
+
+
+
+%Two major thrusts will drive my work for the next few years: mining software repositories and software engineering tools The work on mining software repositories is driven by the need to empirically understand how people develop software, beyond personal experiences and anecdotes. This in turn would  feed into the design of novel engineering tools and techniques. 
+
+
+
+
+
+%There are a number of things that a team can do to optimize the inner loop for larger codebases:
+
+
+%Decisions such as how you build, test and debug, to the actual architecture itself will all impact how productive developers are. Improving one aspect will often cause issues in another.
+
+%Only build and test what was changed.
+%Cache intermediate build results to speed up full builds.
+%Break up the code-base into small units and share binaries.
+
+
+
+
+
+%My broader vision is to move away from development activities painstakingly conducted manually via solutions created using data-driven mathematical models, which make use of the large amount of information available during the software engineering process. 
+
+
+
+
+%Empirical evidence of certain characteristics of software is extremely important for informing design of novel programming systems. 
+
+
+%With so much software freely available, much of what one wants to write probably already exists, in some form. This opens up the opportunity to leverage this data for new programming systems that recombine existing pieces of code.
+
+
+%Benchmarking of clone detection tools/techniques.
+
+%Program Repair via Code Clone detection
+
+%Developer productivity
+
+\vspace{0.5cm}
+%\begin{flushright}
+%Sundar Iyer
+%\end{flushright}
+
+%\end{small}
+%\newpage
+
+%\begin{thebibliography}{deSolaPITH}
+% Change font size?
+% \tiny, \footnotesize, \small,\normalsize, \large, \Large, \LARGE, and \huge 
+%\begin{small}
+\begin{small}
+
+\begin{thebibliography}{}
+\bibliographystyle{}
+
+\bibitem[ICSME 2011]{filecloning}
+ Joel Ossher, Hitesh Sajnani, and Cristina Lopes. “Clone Detection in Open Source Java Projects: The Good, The Bad, and The Ugly,” in Proceedings of International Conference on Software Maintenance, Sept. 2011, Williamsburg, USA 
+
+\bibitem[ICSE 2016 A]{sourcererCC}
+Hitesh Sajnani, Vaibhav Saini, Jeffrey Svejlanko, Chanchal Roy and Cristina Lopes.
+“SoucererCC: Scaling Token-Based Code Clone Detection to Big-Code,” in Proceedings
+of International Conference on Software Engineering, May 2016, Austin, USA  
+
+
+\bibitem[JSEP 2014]{parallellCCJ}
+Hitesh Sajnani, Vaibhav Saini, and Cristina Lopes. “A Parallel and Efficient Approach to Large Scale Code Clone Detection,” Journal of Software: Evolution and Process, March 2015 .
+
+\bibitem[ICPC 2012]{parallellCCC}
+Hitesh Sajnani, Joel Ossher, and Cristina Lopes. “Parallel Code Clone Detection Using
+MapReduce,” in Proceedings of International Conference on Program Comprehension, June
+2012, Passau, Germany
+
+
+\bibitem[IWSC 2013]{parallellCCW}
+Hitesh Sajnani and Cristina Lopes. “A Parallel and Efficient Approach to Large Scale
+Code Clone Detection,” in Proceedings of International Workshop on Software Clones,
+May 2013, San Francisco, USA
+
+\bibitem[ICSME 2016]{quality-clones}
+Vaibhav Saini, Hitesh Sajnani, and Cristina Lopes. “Comparing Quality Metrics for
+Cloned and Non-Cloned Java Methods: A Large Scale Empirical Study,” in Proceedings
+of International Conference on Software Maintenance and Evolution, Oct. 2016,
+Raleigh, USA
+
+\bibitem[ICSME 2016]{quality-popularity}
+Hitesh Sajnani, Vaibhav Saini, and Cristina Lopes. “Is Popularity a Measure of Quality?
+An Analysis of Maven Components,” in Proceedings of the International Conference on
+Software Maintenance and Evolution, Sept. 2014, Victoria, Canada
+
+\bibitem[SCAM 2014]{bugpatterns}
+Hitesh Sajnani, Vaibhav Saini, and Cristina Lopes. “A Comparative Study of Bug
+Patterns in Java Cloned and Non-cloned Code,” in Proceedings of Working Conference
+on Source Code Analysis and Manipulation, Sept. 2014, Victoria, Canada.
+
+\bibitem[ICSE 2016 B]{sourcererCC-1}
+Vaibhav Saini, Hitesh Sajnani, Jaewoo Kim, and Cristina Lopes. “SourcererCC and
+SourcererCC-I: Tools to Detect Clones in Batch mode and During Software Development,”
+in Proceedings of International Conference on Software Engineering, May 2016,
+Austin, USA.
+
+\bibitem[SCAM 2015]{codesearch}
+Otavio Lemos, Adriano de Paula, Hitesh Sajnani, and Cristina Lopes. “Can the Use of Types
+and Query Expansion Help Improve Large-Scale Code Search?,” in Proceedings of
+Working Conference on Source Code Analysis and Manipulation, Sept. 2015, Bremen,
+Germany 
+
+\bibitem[SCAM 2016]{interfaceredundancy}
+Adriano de Paula, Eduardo Guerra, Hitesh Sajnani, Cristina Lopes and Otavio Lemos. “An Exploratory Study of Interface Redundancy in Code Repositories,” in Proceedings of Working Conference on Source Code Analysis and Manipulation, Oct. 2016, Raleigh, USA
+
+\bibitem[ICPC 2012]{archrecoveryicpc}
+Hitesh Sajnani. “Automatic Software Architecture Recovery: A Machine Learning
+Approach,” in Proceedings of International Conference on Program Comprehension, June
+2012, Passau, Germany
+
+\bibitem[ISEC 2013]{archrecoveryisec}
+Hitesh Sajnani and Cristina Lopes. “Probabilistic Component Identification,” in Proceedings
+of the India Software Engineering Conference, Feb 2014, Chennai, India 
+
+\bibitem[MSR 2012]{topicmodelling}
+Lee Martie, Vijay Krishna Palepu, Hitesh Sajnani, and Cristina Lopes. “Trendy Bugs: Topic
+Trends in the Android Bug Reports,” in Proceedings of Mining Software Repositories,
+June 2012, Zurich, Switzerland
+
+\bibitem[ICSE 2014]{activefiles}
+Lukas Schulte, Hitesh Sajnani, and Jacek Czerwonka. “Active Files as a Measure of
+Software Maintainability,” in Proceedings of the International Conference on Software
+Engineering, June 2014, Hyderabad, India 
+
+\bibitem[ICSME 2018]{reporting}
+Pavneet Kochhar, Stanislaw Swierc, Trevor Carnahan, Hitesh Sajnani, Meiyappan Nagappan. “Understanding the role of reporting in work item tracking systems for software development: an industrial case study,” in Proceedings of International Conference on Software Maintenance and Evolution, Sept. 2018, Madrid, Spain, USA 
+
+\bibitem[ICSE 2018]{buildimpact}
+Michele Tufano, Hitesh Sajnani, Kim Herzig. “Towards Predicting the Impact of Software Changes on Building Activities,” in International Conference on Software Engineering, May 2019, Montreal, Canada \textbf{[under review]}
+
+\bibitem[OOPSLA 2017]{dejavu}
+Cristina Lopes, Petr Maj, Pedro Martins, Vaibhav Saini, Di Yang, Jakub Zitny, Hitesh Sajnani, and Jan Vitek. “DéjàVu: a map of code duplicates on GitHub,” in Proceedings of ACM on Programming Languages, OOPSLA, Oct. 2017, Vancouver, Canada
+
+
+\bibitem[PATENT 2018]{prrecommender}
+Hitesh Sajnani, and Stanislaw Sweirc, "Source Code File Recommendation Notification",   US Patent \# 404762-US-NP, Aug. 2018, USA
+
+\bibitem[WCRE 2012]{astra}
+Joel Ossher, Hitesh Sajnani, and Cristina Lopes. “ASTRA: Bottom-up Construction
+of Structured Artifact Repositories,” Proceedings of Working Conference on Reverse
+Engineering, Oct. 2012, Kingston, Canada 
+
+\end{thebibliography}
+\end{small}
+
+\end{document}
