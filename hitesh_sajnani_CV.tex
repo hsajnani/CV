@@ -17,7 +17,9 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{url}
+\usepackage{etaremune}
 %\usepackage{marvosym} % For cool symbols.
+\usepackage{xcolor}
 \usepackage{hyperref}
 \usepackage{lastpage}
 \usepackage{fancyhdr}
@@ -40,6 +42,12 @@
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
+
+\hypersetup{%
+  colorlinks=false,% hyperlinks will be black
+  linkbordercolor=blue,% hyperlink borders will be red
+  pdfborderstyle={/S/U/W 1}% border style will be underline of width 1pt
+}
 
 % Sections formatting
 \titleformat{\section}{
@@ -284,122 +292,127 @@ improve their development practices at Microsoft.}
 \vspace{5pt}
 \textbf{Journal papers}
 
-\begin{enumerate}
+%\begin{enumerate}
+\begin{etaremune}
+ \item\small{Vaibhav Saini, \textbf{Hitesh Sajnani}, and Cristina Lopes. “Cloned and non-cloned Java methods: a comparative study,” Empirical Software Engineering Journal, Volume 23, Issue 4, Pages 2232–2278, August 2018}
 
- \item\small{Vaibhav Saini, \textbf{Hitesh Sajnani}, and Cristina Lopes. “An Empirical Analysis on the
-Relationship Between Software Clones and Quality Metrics,” Empirical Software Engineering Journal, June 2017 \textbf{[Invited Paper]}}
+ \item\small{\textbf{Hitesh Sajnani}, Vaibhav Saini, and Cristina Lopes. “A Parallel and Efficient Approach to Large Scale Code Clone Detection,” Journal of Software: Evolution and Process, Volume 27, Issue 6,
+Pages 402-429, June 2015 }
 
- \vspace{-1pt}\item\small{\textbf{Hitesh Sajnani}, Vaibhav Saini, and Cristina Lopes. “A Parallel and Efficient Approach
-to Large Scale Code Clone Detection,” Journal of Software: Evolution and Process, March 2015 \textbf{[Invited Paper]}}
-
-\end{enumerate}
-
-
+\end{etaremune}
+%\end{enumerate}
 
 \textbf{ Full Conference Papers}
 
-\begin{enumerate}
+\begin{etaremune}
+\item\small{Farima Farmahinifarahani, Vaibhav Saini, Di Yang, \textbf{Hitesh Sajnani}, and Cristina Lopes. “On Precision of Code Clone Detection Tools,” in Proceedings of International Conference on Software Analysis, Evolution and Reengineering, Feb. 2019, Hangzhou, China}
 
-\item\small{Pavneet Kochhar, Stanislaw Swierc, Trevor Carnahan, \textbf{Hitesh Sajnani}, Meiyappan Nagappan. “Understanding the role of reporting in work item tracking systems for software development: an industrial case study,” in Proceedings of International Conference on Software Maintenance and Evolution, Sept. 2018, Madrid, Spain, USA  }
+\item\small{Pavneet Kochhar, Stanislaw Swierc, Trevor Carnahan, \textbf{Hitesh Sajnani}, Meiyappan Nagappan. “Understanding the role of reporting in work item tracking systems for software development: an industrial case study,” in Proceedings of International Conference on Software Maintenance and Evolution (Industry Track), Sept. 2018, Madrid, Spain, USA  }
 
- \vspace{-1pt}\item\small{Cristina Lopes, Petr Maj, Pedro Martins, Vaibhav Saini, Di Yang, Jakub Zitny, \textbf{Hitesh Sajnani}, and Jan Vitek. “DéjàVu: a map of code duplicates on GitHub,” in Proceedings of ACM on Programming Languages, OOPSLA, Oct. 2017, Vancouver, Canada \textbf{[Distinguished Artifact Award]}  }
+\item\small{Cristina Lopes, Petr Maj, Pedro Martins, Vaibhav Saini, Di Yang, Jakub Zitny, \textbf{Hitesh Sajnani}, and Jan Vitek. “DéjàVu: a map of code duplicates on GitHub,” in Proceedings of ACM on Programming Languages, OOPSLA, Oct. 2017, Vancouver, Canada \textbf{[Distinguished Artifact Award]}  }
 
- \vspace{-1pt}\item\small{Adriano de Paula, Eduardo Guerra, \textbf{Hitesh Sajnani}, Cristina Lopes and Otavio Lemos. “An Exploratory Study of Interface Redundancy in Code Repositories,” in Proceedings of Working Conference on Source Code Analysis and Manipulation, Oct. 2016, Raleigh, USA  }
-
- \vspace{-1pt}\item\small{Vaibhav Saini, \textbf{Hitesh Sajnani}, and Cristina Lopes. “Comparing Quality Metrics for
+ \item\small{Vaibhav Saini, \textbf{Hitesh Sajnani}, and Cristina Lopes. “Comparing Quality Metrics for
 Cloned and Non-Cloned Java Methods: A Large Scale Empirical Study,” in Proceedings
 of International Conference on Software Maintenance and Evolution, Oct. 2016,
 Raleigh, USA \textbf{[Distinguished Paper Award]}}
-   \vspace{-1pt}\item\small{\textbf{Hitesh Sajnani}, Vaibhav Saini, Jeffrey Svejlanko, Chanchal Roy and Cristina Lopes.
+
+ \item\small{Adriano de Paula, Eduardo Guerra, \textbf{Hitesh Sajnani}, Cristina Lopes and Otavio Lemos. “An Exploratory Study of Interface Redundancy in Code Repositories,” in Proceedings of Working Conference on Source Code Analysis and Manipulation, Oct. 2016, Raleigh, USA  }
+
+\item\small{\textbf{Hitesh Sajnani}, Vaibhav Saini, Jeffrey Svejlanko, Chanchal Roy and Cristina Lopes.
 “SoucererCC: Scaling Token-Based Code Clone Detection to Big-Code,” in Proceedings
 of International Conference on Software Engineering, May 2016, Austin, USA  }
-   \vspace{-1pt}\item\small{Otavio Lemos, Adriano de Paula, \textbf{Hitesh Sajnani}, and Cristina Lopes. “Can the Use of Types
+
+ \item\small{Otavio Lemos, Adriano de Paula, \textbf{Hitesh Sajnani}, and Cristina Lopes. “Can the Use of Types
 and Query Expansion Help Improve Large-Scale Code Search?,” in Proceedings of
 Working Conference on Source Code Analysis and Manipulation, Sept. 2015, Bremen,
 Germany  }
-   \vspace{-1pt}\item\small{\textbf{Hitesh Sajnani}, Vaibhav Saini, and Cristina Lopes. “A Comparative Study of Bug
+
+ \item\small{\textbf{Hitesh Sajnani}, Vaibhav Saini, and Cristina Lopes. “A Comparative Study of Bug
 Patterns in Java Cloned and Non-cloned Code,” in Proceedings of Working Conference
 on Source Code Analysis and Manipulation, Sept. 2014, Victoria, Canada }
-   \vspace{-1pt}\item\small{\textbf{Hitesh Sajnani}, Vaibhav Saini, and Cristina Lopes. “Is Popularity a Measure of Quality?
+
+ \item\small{\textbf{Hitesh Sajnani}, Vaibhav Saini, and Cristina Lopes. “Is Popularity a Measure of Quality?
 An Analysis of Maven Components,” in Proceedings of the International Conference on
 Software Maintenance and Evolution, Sept. 2014, Victoria, Canada }
-   \vspace{-1pt}\item\small{Lukas Schulte, \textbf{Hitesh Sajnani}, and Jacek Czerwonka. “Active Files as a Measure of
+
+ \item\small{Lukas Schulte, \textbf{Hitesh Sajnani}, and Jacek Czerwonka. “Active Files as a Measure of
 Software Maintainability,” in Proceedings of the International Conference on Software
-Engineering, June 2014, Hyderabad, India }
-   \vspace{-1pt}\item\small{\textbf{Hitesh Sajnani} and Cristina Lopes. “Probabilistic Component Identification,” in Proceedings
+Engineering (SEIP Track), June 2014, Hyderabad, India }
+
+ \item\small{\textbf{Hitesh Sajnani} and Cristina Lopes. “Probabilistic Component Identification,” in Proceedings
 of the India Software Engineering Conference, Feb 2014, Chennai, India }
-   \vspace{-1pt}\item\small{Joel Ossher, \textbf{Hitesh Sajnani}, and Cristina Lopes. “ASTRA: Bottom-up Construction
+
+ \item\small{Joel Ossher, \textbf{Hitesh Sajnani}, and Cristina Lopes. “ASTRA: Bottom-up Construction
 of Structured Artifact Repositories,” Proceedings of Working Conference on Reverse
 Engineering, Oct. 2012, Kingston, Canada }
- \vspace{-1pt}\item\small{\textbf{Hitesh Sajnani}, Ravindra Naik and Cristina Lopes. “Easing Software Evolution: A
+
+ \item\small{\textbf{Hitesh Sajnani}, Ravindra Naik and Cristina Lopes. “Easing Software Evolution: A
 Change-data and Domain-driven Approach,” in Proceedings of India Software Engineering
 Conference, Feb 2012, Kanpur, India }
- \vspace{-1pt}\item\small{\textbf{Hitesh Sajnani}, Ravindra Naik, and Cristina Lopes. “Application Architecture Discovery:
+
+ \item\small{\textbf{Hitesh Sajnani}, Ravindra Naik, and Cristina Lopes. “Application Architecture Discovery:
 Towards Domain-driven, Easily Extensible Code Structure,” in Proceedings of
-Working Conference on Reverse Engineering, Oct. 2011, Limerick, Ireland \textbf{[Best Industrial
+Working Conference on Reverse Engineering (Industry Track), Oct. 2011, Limerick, Ireland \textbf{[Best Industrial
 Paper Award], [Outstanding Paper Award, Tata Consultancy Services]} }
- \vspace{-1pt}\item\small{Joel Ossher, \textbf{Hitesh Sajnani}, and Cristina Lopes. “ Clone Detection in Open Source
+
+\item\small{Joel Ossher, \textbf{Hitesh Sajnani}, and Cristina Lopes. “ Clone Detection in Open Source
 Java Projects: The Good, The Bad, and The Ugly,” in Proceedings of International
 Conference on Software Maintenance, Sept. 2011, Williamsburg, USA }
 
-\end{enumerate}
+\end{etaremune}
 \textbf{Workshop, Tool, and Other Short Papers}
 
-\begin{enumerate}
-
+\begin{etaremune}
 \item\small{Pavneet Kochhar, Stanislaw Swierc, Trevor Carnahan, \textbf{Hitesh Sajnani}, Meiyappan Nagappan. “Understanding the role of reporting in work item tracking systems for software development: an industrial case study,” in Proceedings of International Conference on Software Engineering, May 2018, Gothenburg, Sweden  }
 
-   \vspace{-1pt}\item\small{Vaibhav Saini, \textbf{Hitesh Sajnani}, Jaewoo Kim and Cristina Lopes. “SourcererCC and
+ \item\small{Vaibhav Saini, \textbf{Hitesh Sajnani}, Jaewoo Kim and Cristina Lopes. “SourcererCC and
 SourcererCC-I: Tools to Detect Clones in Batch mode and During Software Development,”
 in Proceedings of International Conference on Software Engineering, May 2016,
 Austin, USA }
 
-   \vspace{-1pt}\item\small{Vaibhav Saini, \textbf{Hitesh Sajnani}, and Cristina Lopes. “A Dataset for Maven Artifacts and
+ \item\small{Vaibhav Saini, \textbf{Hitesh Sajnani}, and Cristina Lopes. “A Dataset for Maven Artifacts and
 Bug Patterns Found in Them,” in Proceedings of the Mining Software Repositories, June
 2014, Hyderabad, India }
-   \vspace{-1pt}\item\small{Vaibhav Saini, \textbf{Hitesh Sajnani}, Jaewoo Kim, and Cristina Lopes. “SourcererCC and
-SourcererCC-I: Tools to Detect Clones in Batch mode and During Software Development,”
-in Proceedings of International Conference on Software Engineering, May 2016,
-Austin, USA }
-   \vspace{-1pt}\item\small{\textbf{Hitesh Sajnani} and Cristina Lopes. “A Parallel and Efficient Approach to Large Scale
+
+\item\small{\textbf{Hitesh Sajnani} and Cristina Lopes. “A Parallel and Efficient Approach to Large Scale
 Code Clone Detection,” in Proceedings of International Workshop on Software Clones,
 May 2013, San Francisco, USA }
 
-   \vspace{-1pt}\item\small{\textbf{Hitesh Sajnani}. “Automatic Software Architecture Recovery: A Machine Learning
+\item\small{\textbf{Hitesh Sajnani}. “Automatic Software Architecture Recovery: A Machine Learning
 Approach,” in Proceedings of International Conference on Program Comprehension, June
 2012, Passau, Germany }
 
-   \vspace{-1pt}\item\small{\textbf{Hitesh Sajnani} and Cristina Lopes. “A Parallel and Efficient Approach to Large Scale
-Code Clone Detection,” in Proceedings of International Workshop on Software Clones,
-May 2013, San Francisco, USA }
-   \vspace{-1pt}\item\small{\textbf{Hitesh Sajnani}, Sarah Javanmardi, David McDonald, and Cristina Lopes. “Multi-Label
-Classification of Short Text: A Casestudy on Wikipedia Barnstars,” in Proceedings
-of the AAAI Conference on Analyzing Microtext, Aug. 2011, San Francisco, USA}
-   \vspace{-1pt}\item\small{Lee Martie, Vijay Krishna Palepu, \textbf{Hitesh Sajnani}, and Cristina Lopes. “Trendy Bugs: Topic
+ \item\small{\textbf{Hitesh Sajnani}, Joel Ossher, and Cristina Lopes. “Parallel Code Clone Detection Using
+MapReduce,” in Proceedings of International Conference on Program Comprehension, June
+2012, Passau, Germany }
+
+\item\small{Lee Martie, Vijay Krishna Palepu, \textbf{Hitesh Sajnani}, and Cristina Lopes. “Trendy Bugs: Topic
 Trends in the Android Bug Reports,” in Proceedings of Mining Software Repositories,
 June 2012, Zurich, Switzerland }
-   \vspace{-1pt}\item\small{\textbf{Hitesh Sajnani}, Joel Ossher, and Cristina Lopes. “Parallel Code Clone Detection Using
-MapReduce,” in Proceedings of International Conference on Program Comprehension, June
-2012, Passau, Germany }
-   \vspace{-1pt}\item\small{\textbf{Hitesh Sajnani}, Joel Ossher, and Cristina Lopes. “Parallel Code Clone Detection Using
-MapReduce,” in Proceedings of International Conference on Program Comprehension, June
-2012, Passau, Germany }
-   \vspace{-1pt}\item\small{Ravindra Naik and \textbf{Hitesh Sajnani}. “Using Change History of Software To Improve
+
+\item\small{\textbf{Hitesh Sajnani}, Sarah Javanmardi, David McDonald, and Cristina Lopes. “Multi-Label
+Classification of Short Text: A Casestudy on Wikipedia Barnstars,” in Proceedings of the AAAI Conference on Analyzing Microtext, Aug. 2011, San Francisco, USA}
+
+\item\small{Ravindra Naik and \textbf{Hitesh Sajnani}. “Using Change History of Software To Improve
 Software Evolvability,” in Proceedings of India Software Engineering Conference, Feb 2010, Mysore, India}
 
-\end{enumerate}
+\end{etaremune}
 
 
 \textbf{Papers under Review}
 
-\begin{enumerate}
+\begin{etaremune}
+
  \item\small{Michele Tufano, \textbf{Hitesh Sajnani}, Kim Herzig. “Towards Predicting the Impact of Software Changes on Building Activities,” in International Conference on Software Engineering, May 2019, Montreal, Canada}
+ \item\small{Vaibhav Saini, Farima Farmahinifarahani, Yadong Lu, Di Yang, Pedro Martins, \textbf{Hitesh Sajnani}, Pierre Baldi, and Cristina Lopes. “Towards Automating Precision Studies of Clone Detectors,” in International Conference on Software Engineering, May 2019, Montreal, Canada}
 
-   \vspace{-1pt}\item\small{Vaibhav Saini, Farima Farmahinifarahani, Yadong Lu, Di Yang, Pedro Martins, \textbf{Hitesh Sajnani}, Pierre Baldi, and Cristina Lopes. “Towards Automating Precision Studies of Clone Detectors,” in International Conference on Software Engineering, May 2019, Montreal, Canada}
+\end{etaremune}
 
-   \vspace{-1pt}\item\small{Farima Farmahinifarahani, Vaibhav Saini, Di Yang, \textbf{Hitesh Sajnani}, and Cristina Lopes. “On Precision of Code Clone Detection Tools,” in International Conference on Software Analysis, Evolution and Reengineering, Feb. 2019, Hangzhou, China}
+\textbf{Dissertations}
+  \vspace{10pt}
 
-\end{enumerate}
+ \hspace{10pt} \small{Ph.D., Information and Computer Science, 2016,  \href{https://escholarship.org/uc/item/45r2308g}{Large-Scale Code Clone Detection}} \\
+  \vspace{10pt}\hspace{10pt} \small{M.S., Information and Computer Science, 2013,  \href{https://uci.primo.exlibrisgroup.com/discovery/fulldisplay?docid=alma991033254679704701&context=L\&vid=01CDL_IRV_INST:UCI\&search_scope=MyInst_and_CI\&tab=Everything\&lang=en}{Enhancing Component Identification Using Machine Learning}}
 
 \newpage
 
@@ -423,7 +436,7 @@ Software Evolvability,” in Proceedings of India Software Engineering Conferenc
 
   \item\small{International Conference on Software Maintenance 2016, 2017, 2018}
   \vspace{-5pt}\item\small{International Workshop on Software Clones 2015, 2016, 2018, 2019}
-  \vspace{-5pt}\item\small{International Conference on Program Comprehension 2017, 2018}
+  \vspace{-5pt}\item\small{International Conference on Program Comprehension 2017, 2018, 2019}
   \vspace{-5pt}\item\small{ International Working Conference on Source Code Analysis and Manipulation 2017, 2018}
   \vspace{-5pt}\item\small{ International Workshop on Software Analytics 2016, 2017}
    \vspace{-5pt}\item\small{International Conference on Mining Software Repositories, Data Track, 2016}
@@ -448,6 +461,7 @@ Montreal, Canada}
   \vspace{-5pt}\item\small{Empirical Software Engineering 2016, 2017, 2018}
   \vspace{-5pt}\item\small{Journal of Systems and Software 2018}
   \vspace{-5pt}\item\small{Science of Computer Programming 2018}
+  \vspace{-5pt}\item\small{Science of Direct Computing 2018}
   \vspace{-5pt}\item\small{Journal on Software Quality 2014, 2015}
   \vspace{-5pt}\item\small{Journal for Software: Evolution and Processes 2013}
 
@@ -538,6 +552,17 @@ Portland, USA}
 
 \end{itemize}
 
+\section{Research covered in press}
+
+\begin{itemize}
+
+\item\small{ DéjàVu: a map of code duplicates on GitHub:  \href{https://www.theregister.co.uk/2017/11/21/github_duplicate_code/}{\color{blue}The Register},  \href{https://blog.acolyer.org/2017/11/20/dejavu-a-map-of-code-duplicates-on-github/}{\color{blue}The Morning Paper},  \href{https://www.bleepingcomputer.com/news/software/82-percent-of-the-code-on-github-consists-of-clones-of-previously-created-files/}{\color{blue}Bleeping Computer},  \href{https://developers.slashdot.org/story/17/11/23/2352233/more-than-half-of-github-is-
+duplicate-code-researchers-find/}{\color{blue}Slashdot} }
+
+\item\small{Using a simple code churn metric to find software bugs:  \href{https://docs.microsoft.com/en-us/azure/devops/learn/devops-at-microsoft/using-simple-code-churn-metric-find-software-bugs}{\color{blue}DevOps at Microsoft} }
+
+\end{itemize}
+
 \section{References}
 
 \begin{tabular}{lr}
@@ -552,12 +577,11 @@ lopes@uci.edu \\
 \end{minipage}
 &
 \begin{minipage}[t]{3.5in}
-Dr.\ Nachiappan Nagappan\\
-Principal Researcher\\
-Microsoft Research\\
-Empirical Software Engineering Group (ESE)\\
-Redmond, WA\\
-nachin@microsoft.com\\
+Prof. Dr. Rainer Koschke\\
+Full Professor, University of Bremen\\
+Leiter AG Softwaretechnik \\
+28359 Bremen, Germany\\
+koschke@uni-bremen.de\\
 \end{minipage}
 \\
 \\ 
@@ -571,12 +595,24 @@ tzimmer@microsoft.com\\
 \end{minipage}
 &
 \begin{minipage}[t]{3.5in}
+Dr.\ Nachiappan Nagappan\\
+Principal Researcher\\
+Microsoft Research\\
+Empirical Software Engineering Group (ESE)\\
+Redmond, WA\\
+nachin@microsoft.com\\
+\end{minipage}
+\\
+\\
+\begin{minipage}[t]{3.5in}
 Dr.\ Michael W. Godfrey \\
 Professor, David R. Cheriton School of Computer Science\\
 University of Waterloo\\
 Waterloo, Ontario, N2L 3G1, Canada \\
 migod@uwaterloo.ca \\
 \end{minipage}
+
+
 \end{tabular}
 
 

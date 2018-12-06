@@ -1,0 +1,84 @@
+\documentclass{article}
+
+\usepackage[dvinames]{xcolor}
+% Measurements are taken directly from the guide
+\usepackage[top=2in,left=1.5in,bottom=0.5in,right=0.625in]{geometry}
+\usepackage{graphicx}
+\usepackage[colorlinks=false,
+            pdfborder={0 0 0},
+            ]{hyperref}
+\usepackage{lipsum}
+\usepackage[absolute]{textpos}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+% A nice serif font, but no the prescribed nonfree ITC stone
+%\usepackage[oldstylenums]{kpfonts}
+%\usepackage[T1]{fontenc}
+
+% No paragraph indentation
+\parindent0pt
+\setlength{\parskip}{0.8\baselineskip}
+\raggedright
+\pagestyle{empty}
+% Define WSU official colors
+\definecolor{WSUcrimson}{RGB}{152,30,50}
+\definecolor{WSUgray}{HTML}{5e6a71}
+% Ensure consistency in the footer
+\urlstyle{sf}
+
+\begin{document}
+
+December 5, 2018
+\bigskip
+
+Hitesh Sajnani \\
+Research Engineer, Tools for Software Engineers (TSE), Microsoft \\
+Email: hsajnani@uci.edu \\
+Ph: 832-278-7005
+
+\bigskip
+Dear Faculty Search Committee:
+
+I am applying for the position of tenure-track assistant professor in the Department of Computer Science at the University of California, Santa Barbara with a focus in software engineering as advertised here: 
+\url{https://recruit.ap.ucsb.edu/apply/JPF01312}
+
+I am a software engineering researcher with a computer science background in
+machine learning, information retrieval and statistics. My research strives to make the current
+generation of programmers more productive --- by building assistive tools \& techniques, and conducting 
+empirical studies that provide more insight about software development and evolution. I conduct research heavily based on empirical data for assessing value of design ideas and for extracting knowledge out of very large datasets, often by challenging existing beliefs. 
+
+The impact of my research include over a couple of dozen publications, technology transfers to Microsoft, and contributions to Azure DevOps (\url{https://azure.microsoft.com/en-us/blog/introducing-azure-devops/}) --- a Microsoft's product that span the breadth of the development lifecycle to help developers ship software faster and with higher quality. Azure DevOps is used by over 5 million developers all over the world as their engineering infrastructure. This uniquely large user base enables me to conduct studies and evaluate hypothesis at a scale that is not feasible in traditional lab settings.
+
+I finished my Ph.D. in Information and Computer Sciences with a focus on software engineering from University of California, Irvine in 2016. 
+Since then, I am working as a research engineer in Tools for Software Engineers (TSE) 
+group at Microsoft. During my tenure at TSE,  I have developed the ability to identify areas where software engineering research can contribute
+to drive real impact in practice. My performance over the past couple of year has
+shown that I can create and implement research agendas, obtain funding, and mentor students to publish papers.
+
+Thank you for taking the time to review my application. I look forward to hearing from you.
+
+% Write the body of the letter
+%\lipsum[1]
+
+\bigskip
+
+Sincerely,
+\vspace{4\baselineskip}
+
+Hitesh Sajnani \\
+
+
+
+% -------------------------------------------------------
+% Add logo, the text under the crimson line, and the line itself
+\begin{textblock*}{2in}[0.3066,0.39](1.5in,1.33in)
+    \includegraphics[width=2in]{mslogo1}
+\end{textblock*}
+
+% Add the footnote. A better way would be to use fancyhdr
+\vfill
+{\footnotesize\color{WSUgray}\sffamily
+One Microsoft Way, Redmond, WA 98052\\[-0.1\baselineskip]
+(425) 882-8080  \textbullet\ \url{https://www.microsoft.com}
+}
+\end{document}
