@@ -72,11 +72,11 @@ or adaptations, also known as code cloning, has become a common behavior of soft
 
 % This phenomenon has inspired my research in identifying, understanding and analyzing software clones. 
 
-When I joined UC Irvine in 2010, along with my colleagues, we conducted  one of the largest empirical study
+When I joined UC Irvine in 2010, me and my colleagues conducted one of the largest empirical study
 on more than 13,000 Java projects to understand the prevalance of code cloning/reuse in open source Java eco-system~\cite{filecloning}.
 The study revealed insights about the circumstances under which files were copied/reused entirely into applications with little or no modification -- not all of which were bad. 
 More importantly, during the course of this study, I realized that there is a marked lack of accurate and scalable clone detectors that impedes code clone research on large software repositories. 
-Scalability has become critical for research tools, as more and more software-related data is available. Whereas a few years ago a good software engineering research evaluation would target a dozen artifacts, research studies are now expected to target hundreds of thousands of them (e.g. entire language ecosystems). This motivated my work later in this field to develop scalable and accurate code clone detection tools and techniques.  
+Scalability has become critical for research tools, as more and more software-related data is available. Whereas a few years ago a good software engineering research evaluation would target a dozen artifacts, research studies are now expected to target hundreds of thousands of them (e.g., entire language ecosystems). This motivated my work later in this field to develop scalable and accurate code clone detection tools and techniques.  
 % that further enabled large scale empirical studies by to understand the phenomenon of code cloning in open source eco-systems.
 
 %More specifically, I have made contributions in the software cloning field three major aspects: (i) SourcererCC, a novel tool to efficiently
@@ -99,7 +99,7 @@ Scalability has become critical for research tools, as more and more software-re
 During the course of my Ph.D., I developed several approaches to large scale code clone detection~\cite{parallellCCW, parallellCCJ, parallellCCC}, but the most central work to my dissertation is SoucererCC  ---  a tool for source code clone detection designed to detect up to Type 3 (near-miss) clones over very large code bases~\cite{sourcererCC}.  SourcererCC is purely token based, and ignores information coming from syntax trees or dependence graphs – that is what allows it to be potentially fast, compared to more sophisticated code clone detection approaches. %But clone detection is, at its core, an $O(N^2)$ problem, a property that always presents a serious obstacle to scalability. In order to tackle the scalability problem, SourcererCC builds on techniques that come from work in large databases and search engines, specifically SSJoin, and prefix and positional filtering. 
 The core insight of SourcererCC was that the simple bag-of-words model that works so well – and so fast – for text documents could also be effective and efficient for detecting code clones. This is counter-intuitive, as a significant portion of the semantics of programs comes from their syntactic structures. The underlying intuition was that identifiers also reflect the semantics, as well as the role of the entities they label. Therefore, code fragments having similar semantics are likely to have similarity in their identifiers. Based on this intuition, as well as some preliminary evidence, SourcererCC was developed in order to test this hypothesis at scale. An extensive comparative evaluation of SourcererCC against six different tools showed that it is the most scalable clone detection tool, and that its precision/recall performance is comparable to the most sophisticated code clone detectors publicly available. SourcererCC successfully detected inter project clones across more than 25,000 projects consisting of over 300 MLOC on a standard workstation in under four days.
 
-This is the first time the issue of scalability of these tools had been explicitly addressed, and yielded a practical solution.  As such, because it can handle very large code bases, SourcererCC is enabling new research that couldn’t be done before. SourcererCC is publicly available at \url{https://github.com/Mondego/SourcererCC} on GitHub and since it's development, several other researchers have used, extended and included  SourcererCC in the courses to advance research in clone detection and even other related research areas. Published less than two years ago, the ICSE 2016 paper has already over 85 citations (up to today). 
+This is the first time the issue of scalability of these tools had been explicitly addressed, and yielded a practical solution.  As such, because it can handle very large code bases, SourcererCC is enabling new research that couldn’t be done before. SourcererCC is publicly available at \url{https://github.com/Mondego/SourcererCC} on GitHub and since it's development, several other researchers have used, extended and included  SourcererCC in the courses to advance research in clone detection and even other related research areas. Published less than two years ago, the ICSE 2016 paper has already over 90 citations (up to today). 
 %The impact of SourcererCC goes beyond creating new cutting-edge clone detection tools, further enable large-scale empirical research in code cloning. 
 
 My research in mining software repositories targets studying various
@@ -111,11 +111,11 @@ which allows the reuse of tested code, or better separation of concerns. These t
 defensible opinions raise the question of whether code cloning should be avoided, eliminated,
 tolerated or even recommended, and under what situations. 
 %The interest and the lack of knowledge on the topic led to a call to conduct more empirical studies on the relation of clones to quality attributes. 
-Motivated by these and due to lack of empirical studies, my colleagues and I conducted two statistical
+Motivated by these and due to lack of empirical studies, me and my colleagues conducted two empirical
 studies to understand (a) the relationship between code clones and 27 software quality metrics
 (ICSME 2016 ACM Best Paper Award)~\cite{quality-clones}; and (b) the relationship between code clones and 50 bug
-patterns~\cite{bugpatterns}. These studies were conducted on 4,421 Java projects, totaling
-1,486,882 methods. They are the largest studies to explore the
+patterns~\cite{bugpatterns}. These studies were conducted on more than 4,500 Java projects, totaling
+1.5 million methods. They are the largest studies to explore the
 relationship between code cloning and various quality attributes so far. 
 %The above studies are extremely important because like all complex problems, the issue of code cloning is that it may be a harmful programming practice (i.e. degrading the quality of the software).
 These findings provide a statistically significant piece of evidence that code cloning is not as
@@ -125,21 +125,6 @@ eliminating them. Such tools and techniques can help developers take advantage o
 development using cloning and manage clones automatically to avoid degrading the quality of
 cloned code. 
 
-In another work, in collobaration with Prof. Lopes, Prof. Jan Vitek and their students 
-to study the extent of code duplication on GitHub, SourcererCC was used to 
-analyze a corpus of 4.5 million non-fork projects hosted on GitHub representing over 428 million files written
-in Java, C++, Python, and JavaScript~\cite{dejavu}. We found that this corpus has a mere 85 million unique files. In other
-words, 70\% of the code on GitHub consists of clones of previously created files that can be found elsewhere. These rates
-of duplication have implications for systems built on open source software as well as for researchers interested
-in analyzing large code bases. This work was also covered by media including SlashDot, The Register, Reddit, InfoWorld,
-and Hacker News.
-%SourcererCC is also the foundation of SourcererCC-D and SourcererCC-I~\cite{sourcererCC-1}:
-%(i) SourcererCC-D: a distributed version of SourcererCC that exploits the inherent parallelism present in SourcererCC's approach to scale horizontally on a cluster of
-%commodity machines for large scale code clone detection. The experiments presented in my dissertation demonstrate SourcererCC-D's ability to achieve ideal speed-up and near linear scale-up on large datasets; and
-%ii) SourcererCC-I: an interactive and real-time version of SourcererCC that is integrated with the Eclipse development environment. SourcererCC-I is built to support developers in clone-aware development and maintenance activities.
-
-%While working on development of these tools, I realized while there have been many tools proposed, evaluating their performance is still challenging. There is a distinct lack of bencmarks to evaluate the tools and techniques proposed. As a result, more recently, I worked on automating the evaluation of these tools and techniques. 
-%Dr. Lopes, I, and some collaborators have used SourcererCC to find clones in hundreds of thousands of projects in GitHub, in a DARPA-funded project. The tool works remarkably well. Since then, 
 Similar to the \enquote{clones are evil} paradigm, one of the perceived values of open source software is the idea that \enquote{many eyes} can increase code quality and reduce the number
 of bugs. That is, if a project is used by many users, it will have fewer bugs. We
 questioned this perception due the lack of supporting evidence and conducted an
@@ -149,8 +134,31 @@ in most of the cases, there is no correlation between how widely the project was
 and how many bugs it had --- breaking an existing prevalent belief~\cite{quality-popularity}. Statistically speaking,
 the usage of open source components is driven by factors other than their engineering
 quality, a result with important implications for software engineering research. 
-Some of the my other empirical studies have informed design of the tools and techniques related to code search~\cite{codesearch, interfaceredundancy} and component identification~\cite{astra}. 
-A common thread in my empirical research is to evaluate design ideas, validate existing beliefs and extract knowledge out of very large datasets.
+
+In another work, in collobaration with Prof. Cristina Lopes, Prof. Jan Vitek and their students 
+to study the extent of code duplication on GitHub, SourcererCC was used to 
+analyze a corpus of 4.5 million non-fork projects hosted on GitHub representing over 428 million files written
+in Java, C++, Python, and JavaScript~\cite{dejavu}. We found that this corpus has a mere 85 million unique files. In other
+words, 70\% of the code on GitHub consists of clones of previously created files that can be found elsewhere. 
+This study has some important consequences. First, it would seem that GitHub, itself, might be able to compress its corpus to a fraction of what it is. 
+Second, more and more research is being done using large collections of open source projects readily available from GitHub.
+These rates of code duplication can severely skew the conclusions of those studies since the assumption of diversity of projects in those datasets may be compromised.  
+As part of this work, we've made available DéjàVu, an online hosted service that contains a map of code duplicates on GitHub for researchers and developers to navigate through code cloning in GitHub, and avoid it when necessary. This work is also featured in media including SlashDot, The Register, Reddit, InfoWorld, and Hacker News. Some of the my other empirical studies have informed design of the tools and techniques related to code search~\cite{codesearch, interfaceredundancy} and component identification~\cite{astra}. A common thread in my empirical research is to evaluate design ideas, validate existing beliefs and extract knowledge out of very large datasets.
+
+%have implications for systems built on open source software as well as for researchers interested in analyzing large code bases. 
+%an severely skew the conclusions of those studies. The assumption of diversity of projects in those datasets may be compromised. 
+
+
+
+
+%SourcererCC is also the foundation of SourcererCC-D and SourcererCC-I~\cite{sourcererCC-1}:
+%(i) SourcererCC-D: a distributed version of SourcererCC that exploits the inherent parallelism present in SourcererCC's approach to scale horizontally on a cluster of
+%commodity machines for large scale code clone detection. The experiments presented in my dissertation demonstrate SourcererCC-D's ability to achieve ideal speed-up and near linear scale-up on large datasets; and
+%ii) SourcererCC-I: an interactive and real-time version of SourcererCC that is integrated with the Eclipse development environment. SourcererCC-I is built to support developers in clone-aware development and maintenance activities.
+
+%While working on development of these tools, I realized while there have been many tools proposed, evaluating their performance is still challenging. There is a distinct lack of bencmarks to evaluate the tools and techniques proposed. As a result, more recently, I worked on automating the evaluation of these tools and techniques. 
+%Dr. Lopes, I, and some collaborators have used SourcererCC to find clones in hundreds of thousands of projects in GitHub, in a DARPA-funded project. The tool works remarkably well. Since then, 
+
 
 %Dr. Sajnani has made several more research contibutions in the field of software engineering. For example, in series of papers that Dr. Sajnani published in WCRE 2011, ICPC 2012, ISEC 2014, he was the first one to
 
@@ -159,7 +167,7 @@ A common thread in my empirical research is to evaluate design ideas, validate e
 I have demonstrated how advanced machine learning (ML) techniques can be tailored for complex software engineering tasks, including architecture recovery~\cite{archrecoveryicpc, archrecoveryisec} and knowledge extraction from bug reports~\cite{topicmodelling}. 
 Automatic architecture recovery is the process of recovering architecture of complex software systems with minimal human intervention which in turn can
 improve developers’ understanding of the code bases. My approach, first, extracts structural, behavioral, domain, and contextual (e.g. code
-authorship, line co-change) information from the software and related artifacts. Next, uses advanced custom ML techniques to build model which produces schematics that reasonably represent the
+authorship, line co-change) information from the software and related artifacts. Next, it uses advanced custom ML techniques to build model which produces schematics that reasonably represent the
 project’s main components and the relations among them. 
 %First, given any software system, the approach extracts structural, runtime behavioral, domain, textual and contextual (e.g. code
 %authorship, line co-change) information from the software that will be used by ML techniques to build a model. Since advanced ML techniques are highly scalable, this approach allows one to
@@ -195,7 +203,8 @@ More specifically, there are research opportunities in how to:
 \vspace{-5pt}\item minimize the tax paid due to process overhead by eliminating it where it is not necessary on any particular run through the loop (e.g., can some operations be deferred in some deployments?).
 \end{enumerate}
 
-As new code and more complexity is added to any codebase, it often leads to an increase in the time spent by the developers in their inner loop. In other words, more code means more tests which in turn means more execution time and a slow execution of the inner loop. Similarly, addtional dependencies/complexities often lead to an increase in --- build time, potentially flaky tests, and congitive overload for the developers.
+As new code and more complexity is added to any codebase, it often leads to an increase in the time spent by the developers in their inner loop. In other words, more code means more tests which in turn means more execution time and a slow execution of the inner loop. Similarly, additional dependencies/complexities often lead to an increase in --- build time, potentially flaky tests, and congitive overload for the developers.
+
 There are a number of things that can be done to optimize the inner loop for large codebases, including (i) only build and test what was changed; (ii) cache intermediate build results to speed up full builds; (iii) break up the code-base into small units and share binaries; and (iv) optimize code review process via bots for certain class of issues.
 However, there is no silver bullet solution that will ensure that the inner loop does not start slowing down. It is important to understand when it starts happening, what the cause is and work to address it. Utlimately, if ignored, a system can quickly degrade where even small changes require a disproportionate amount of time to execute the feedback collection steps of the inner loop --- and in the process, increasing developer frustation and decreasing their productivity. 
 
